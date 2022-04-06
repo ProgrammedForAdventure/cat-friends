@@ -3,10 +3,6 @@ import Card from "./Card";
 
 const CardList = ({ cats }) => {
     const cardComponent = cats.map((user, i) => {
-        if (true) {
-            throw new Error('NOOOOOOOOOO');
-        }
-
         return (
             <Card
                 key={cats[i].id}
