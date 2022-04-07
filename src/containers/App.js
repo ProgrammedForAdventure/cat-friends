@@ -14,7 +14,9 @@ function App() {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(response => response.json())
             .then(users => setCats(users));
-    }, []);
+    }, []); // Only runs on initial render
+    // }, [cats]); // Would run on infinite loop, since setCats() gets called within
+    // }, [searchField]); // Runs on initial render, and then whenever search is updated.
 
     const onSearchChange = (event) => setSearchField(event.target.value);
 
